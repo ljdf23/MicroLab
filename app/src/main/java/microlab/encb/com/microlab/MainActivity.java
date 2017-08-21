@@ -34,19 +34,19 @@ import microlab.encb.com.microlab.ui.samples.SamplesFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    ViewPagerAdapter mViewPagerAdapter;
     @BindView(R.id.vp_horizontal_ntb)
     ViewPager mViewPager;
-    @BindView(R.id.tabs)
-    TabLayout mTabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_main);
+        setContentView(R.layout.activity_login);
 
-        ButterKnife.bind(this);
+      //  ButterKnife.bind(this);
 
-        UIInit();
+       // UIInit();
     }
 
     private void UIInit() {
@@ -103,54 +103,14 @@ public class MainActivity extends AppCompatActivity
         );
 
         navigationTabBar.setModels(models);
+        mViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         final ViewPager viewPager = findViewById(R.id.vp_horizontal_ntb);
-        viewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
-            @Override
-            public int getCount() {
-                return 5;
-            }
-
-            @Override
-            public Fragment getItem(int position) {
-                return new SamplesFragment();
-            }
-
-            @Override
-            public boolean isViewFromObject(final View view, final Object object) {
-                return view.equals(object);
-            }
-
-            @Override
-            public void destroyItem(final View container, final int position, final Object object) {
-                ((ViewPager) container).removeView((View) object);
-            }
-
-
-/*
-            @Override
-            public Object instantiateItem(final ViewGroup container, final int position) {
-                final View view = LayoutInflater.from(
-                        getBaseContext()).inflate(R.layout.fragment_samples, null, false);
-
-                container.addView(view);
-                return view;
-            }
-            */
-        });
+        viewPager.setAdapter(mViewPagerAdapter);
 
         navigationTabBar.setViewPager(mViewPager, 0);
         navigationTabBar.setTitleMode(NavigationTabBar.TitleMode.ALL);
     }
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

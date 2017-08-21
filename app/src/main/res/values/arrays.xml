@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nav_colors">
+        <item>#8BC34A</item>
+        <item>#689F3F</item>
+        <item>#8BC34F</item>
+        <item>#689F3F</item>
+        <item>#8BC34A</item>
+    </string-array>
+
+
+</resources>

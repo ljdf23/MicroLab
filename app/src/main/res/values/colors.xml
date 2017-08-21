@@ -9,5 +9,9 @@
     <color name="secondary_text">#757575</color>
     <color name="icons">#212121</color>
     <color name="divider">#BDBDBD</color>
+    <color name="white">#FFFFFF</color>
 
+    <color name="colorMarfil_15">#FFFFFF</color>
+
+    <color name="colorPetroleo_9">#263238</color>
 </resources>
