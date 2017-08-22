@@ -14,4 +14,6 @@
     <color name="colorMarfil_15">#FFFFFF</color>
 
     <color name="colorPetroleo_9">#263238</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>
