@@ -21,5 +21,10 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="mis_muestras">Muestras</string>
+    <string name="mi_historial">Historial</string>
+    <string name="contacto">Contacto</string>
+    <string name="conocenos">Conócenos</string>
+    <string name="mi_cuenta">Mi Cuenta</string>
 
 </resources>

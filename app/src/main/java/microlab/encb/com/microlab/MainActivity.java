@@ -2,27 +2,13 @@ package microlab.encb.com.microlab;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.widget.TableLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -30,7 +16,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import devlight.io.library.ntb.NavigationTabBar;
 import microlab.encb.com.microlab.adapters.ViewPagerAdapter;
-import microlab.encb.com.microlab.ui.samples.SamplesFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -42,11 +27,11 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash_screen);
+        setContentView(R.layout.content_main);
 
-      //  ButterKnife.bind(this);
+        ButterKnife.bind(this);
 
-       // UIInit();
+        UIInit();
     }
 
     private void UIInit() {
@@ -57,47 +42,47 @@ public class MainActivity extends AppCompatActivity
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.lab11),
+                        getResources().getDrawable(R.drawable.mis_muestras_unselected),
                         Color.parseColor(colors[0]))
-                        .selectedIcon(getResources().getDrawable(R.drawable.lab1))
-                        .title("Muestras")
+                        .selectedIcon(getResources().getDrawable(R.drawable.mis_muestras_selected))
+                        .title(getString(R.string.mis_muestras))
                         .badgeTitle("NTB")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.lab3),
+                        getResources().getDrawable(R.drawable.mi_historial_unselected),
                         Color.parseColor(colors[1]))
-                        .selectedIcon(getResources().getDrawable(R.drawable.lab4
+                        .selectedIcon(getResources().getDrawable(R.drawable.mi_historial_selected
                         ))
-                        .title("Resultados")
+                        .title(getString(R.string.mi_historial))
                         .badgeTitle("with")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.lab7),
+                        getResources().getDrawable(R.drawable.contacto_unselected),
                         Color.parseColor(colors[2]))
-                        .selectedIcon(getResources().getDrawable(R.drawable.lab10))
-                        .title("Avisos")
+                        .selectedIcon(getResources().getDrawable(R.drawable.contacto_selected))
+                        .title(getString(R.string.contacto))
                         .badgeTitle("state")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.lab12),
+                        getResources().getDrawable(R.drawable.conocenos_unselected),
                         Color.parseColor(colors[3]))
-                        .selectedIcon(getResources().getDrawable(R.drawable.lab9))
-                        .title("Historial")
+                        .selectedIcon(getResources().getDrawable(R.drawable.conocenos_selected))
+                        .title(getString(R.string.conocenos))
                         .badgeTitle("icon")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.lab5),
+                        getResources().getDrawable(R.drawable.mi_cuenta_unselected),
                         Color.parseColor(colors[4]))
-                        .selectedIcon(getResources().getDrawable(R.drawable.lab6))
-                        .title("Ubicación")
+                        .selectedIcon(getResources().getDrawable(R.drawable.mi_cuenta_selected))
+                        .title(getString(R.string.mi_cuenta))
                         .badgeTitle("777")
                         .build()
         );
