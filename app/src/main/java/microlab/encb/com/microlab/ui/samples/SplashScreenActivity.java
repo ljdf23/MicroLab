@@ -14,7 +14,7 @@ import microlab.encb.com.microlab.presenters.SplashScreenPresenter;
  * Created by Luis on 22/08/2017.
  */
 
-public class SplashScreen extends AppCompatActivity implements SplashScreenContract.View{
+public class SplashScreenActivity extends AppCompatActivity implements SplashScreenContract.View{
 
     private SplashScreenPresenter splashScreenPresenter;
 
@@ -30,4 +30,12 @@ public class SplashScreen extends AppCompatActivity implements SplashScreenContr
     public void showMainMenu() {
         startActivity(new Intent(this, MainActivity.class));
     }
+
+    @Override
+    public void showLogin() {
+        startActivity(new Intent(this, LoginActivity.class));
+    }
+
+    @Override
+    public void clearView() {  finish();  }
 }

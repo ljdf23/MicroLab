@@ -8,6 +8,8 @@ public class SplashScreenContract {
 
     public static interface View {
         void showMainMenu();
+        void showLogin();
+        void clearView();
     }
 
 

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".ui.samples.SplashScreen"
+            android:name=".ui.samples.SplashScreenActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ui.samples.LoginActivity"></activity>
     </application>
 
 </manifest>

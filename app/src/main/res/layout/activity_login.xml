@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="55dp"
+    android:background="@color/primary"
+    android:orientation="vertical"
     android:paddingLeft="24dp"
     android:paddingRight="24dp"
-    android:background="@color/white">
+    android:paddingTop="55dp">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="24dp"
-        android:src="@drawable/logo" />
+        android:layout_marginBottom="@dimen/layout_24"
+        android:src="@drawable/logo_little" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:elevation="2dp"
-    style="@style/LoginFormLayout">
-
-    <!--  Email Label -->
-    <android.support.design.widget.TextInputLayout
+    <LinearLayout
+        style="@style/LoginFormLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        >
-        <EditText android:id="@+id/input_email"
+        android:elevation="2dp"
+        android:orientation="vertical">
+
+        <!--  Email Label -->
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="Correo electrónico" />
-    </android.support.design.widget.TextInputLayout>
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            >
+            <EditText android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electrónico"
+                android:inputType="textEmailAddress" />
+        </android.support.design.widget.TextInputLayout>
 
-    <!--  Password Label -->
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        >
-        <EditText android:id="@+id/input_password"
+        <!--  Password Label -->
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Contraseña"/>
-    </android.support.design.widget.TextInputLayout>
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            >
+            <EditText android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
 
-</LinearLayout>
+    </LinearLayout>
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btn_login"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        android:padding="12dp"
+        android:layout_marginBottom="@dimen/layout_24"
+        android:layout_marginTop="@dimen/layout_24"
+        android:padding="@dimen/padding_12"
         android:text="Ingresar"/>
 
     <TextView android:id="@+id/link_signup"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="¿No tienes cuenta? Crea una aqui."
+        android:layout_marginBottom="@dimen/layout_24"
         android:gravity="center"
+        android:text="¿No tienes cuenta? Crea una aqui."
         android:textSize="16dip"/>
 
 </LinearLayout>

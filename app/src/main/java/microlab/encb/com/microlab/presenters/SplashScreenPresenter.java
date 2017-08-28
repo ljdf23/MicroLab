@@ -1,4 +1,6 @@
 package microlab.encb.com.microlab.presenters;
+import android.os.Handler;
+
 import microlab.encb.com.microlab.contracts.SplashScreenContract;
 
 /**
@@ -15,7 +17,12 @@ public class SplashScreenPresenter implements SplashScreenContract.Action  {
 
     @Override
     public void delayProcess() {
-        android.os.SystemClock.sleep(2000);
-        mView.showMainMenu();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mView.showLogin();
+                mView.clearView();
+            }
+        },2000);
     }
 }
