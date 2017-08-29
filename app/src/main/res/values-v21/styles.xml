@@ -1,0 +1,12 @@
+
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorButtonNormal">@color/primary_light</item>
+        <item name="android:windowBackground">@color/accent</item>
+
+    </style>
+
+</resources>
