@@ -26,5 +26,8 @@
     <string name="contacto">Contacto</string>
     <string name="conocenos">Conócenos</string>
     <string name="mi_cuenta">Mi Cuenta</string>
+    <string name="txt_password">Contraseña</string>
+    <string name="txt_correo_electronico">Correo electrónico</string>
+    <string name="lbl_login_ingresar">Ingresar</string>
 
 </resources>

@@ -10,5 +10,9 @@
     <dimen name="dialog_icon">30dp</dimen>
     <dimen name="text_size_16">16dp</dimen>
     <dimen name="layout_24">24dp</dimen>
+    <dimen name="layout_10">10dp</dimen>
     <dimen name="padding_12">12dp</dimen>
+
+
+    <dimen name="font_14">14dp</dimen>
 </resources>
